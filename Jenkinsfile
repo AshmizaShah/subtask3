@@ -33,10 +33,10 @@ pipeline {
                 echo 'Pushing to GitHub...'
                 withCredentials([sshUserPrivateKey(credentialsId: 'cicd', keyFileVariable: 'SSH_KEY')]) {
                     sh '''
-                    git config --global user.email "you@example.com"
-                    git config --global user.name "Your Name"
+                    git config --global user.email "ashmizashah143@gmail.com"
+                    git config --global user.name "AshmizaShah"
                     git init
-                    git remote add origin git@github.com:AshmizaShah/test.git
+                    git remote add origin git@github.com:AshmizaShah/subtask3.git
                     git add .
                     git commit -m "Add build and test files"
                     git push -u origin main
