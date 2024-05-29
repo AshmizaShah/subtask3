@@ -31,7 +31,7 @@ pipeline {
         stage('Push to GitHub') {
             steps {
                 echo 'Pushing to GitHub...'
-                withCredentials([sshUserPrivateKey(credentialsId: 'github-ssh-key', keyFileVariable: 'SSH_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'cicd', keyFileVariable: 'SSH_KEY')]) {
                     sh '''
                     git config --global user.email "you@example.com"
                     git config --global user.name "Your Name"
