@@ -35,7 +35,7 @@ pipeline {
                     sh '''
                     git config --global user.email "ashmizashah143@gmail.com"
                     git config --global user.name "AshmizaShah"
-                    git init
+                    git remote remove origin || true
                     git remote add origin git@github.com:AshmizaShah/subtask3.git
                     git add .
                     git commit -m "Add build and test files"
